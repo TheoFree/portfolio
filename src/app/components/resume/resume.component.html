@@ -1,0 +1,122 @@
+<button class="btn btn-dark" (click)="this.toggle()" style="position:sticky;left:30px;top:200px;z-index:2;">View
+    {{this.notViewed()}}</button>
+
+<div [@changeView]="resumeTprojectsF ? 'Active' : 'Inactive'">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 offset-2 my-4 text-center">
+                <h1>A never ending pursuit of higher understanding</h1>
+                <hr class="my-4 w-75" />
+                <h5>
+                    I'm a Computer Science Graduate and Private Pilot with a variety of skills and interests which feed
+                    an
+                    undying hunger for knowledge.
+                </h5>
+                <hr>
+                <h2>Resume</h2>
+                <h3>Theodore R Freeman</h3>
+                <div class="separator-bar my-2"></div>
+                <button class="btn btn-primary">Contact Me // put contact icons here</button>
+                <div class="separator-bar my-2"></div>
+                <h3>Skills</h3>
+
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col">
+                        <ul>
+                            <li>Web Development using Bootstrap and Angular</li>
+                            <li>Development with C, C++, Python, Javascript, Typescript</li>
+                            <li>Database experience with MySql, Cassandra</li>
+                            <li>Machine Learning experience with Python using Jupyter Notebooks, SciKit Learn, Pandas,
+                                Numpy</li>
+                            <li>Version control: Git</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+                <div class="separator-bar my-2"></div>
+                <h3>Education</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 offset-3 text-center">
+                            <h5>Bachelors of Computer Science</h5>
+                            <span>Graduated - 2018</span> <span> University of Colorado, Boulder</span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div [@changeView]="!resumeTprojectsF ? 'Active' : 'Inactive'">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8 offset-2 my-4 text-center">
+                <h3>Projects</h3>
+                <p>
+                    These are projects that I've recently completed, as well as some which I'm currently planning or
+                    working on actively!
+                </p>
+
+                <div class="row">
+                    <div class="col-sm-4 offset-1">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>DnD 5e Character Sheet</strong>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    A character sheet tool where users can create, edit, and download characters.
+                                </p>
+                                <img src="/assets/images/CharSheetPreview.png" alt="Preview Image" width="250px">
+                                <p>
+                                    The character sheet does some extra useful things for players like:
+                                </p>
+                                <ul>
+                                    <li>Compute Modifiers</li>
+                                    <li>Simple damage and healing buttons</li>
+                                    <li>A spellbook page where players can keep track of spells of all levels</li>
+                                </ul>
+
+                            </div>
+                            <div class="card-footer">
+                                <span class="mx-1">
+                                   <a href="https://dnd5e-character-sheet.web.app/home" target="_blank" class="btn btn-secondary">View Site</a>
+                                </span>
+                                <span class="mx-1">
+                                    <a href="https://github.com/TheoFree/Dnd5eCharacterSheet" target="_blank" class="btn btn-secondary">View Code</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 offset-2">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Api Explorer</strong>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    This evolved into a project as I was working on learning about APIs.
+                                    APIs implemented:
+                                </p>
+                                <ul>
+                                    <li>Google Maps with a search bar that tries to autocomplete user entries</li>
+                                    <li>An interface for a local server and mongodb database that I made</li>
+                                    <li>Three different NASA APIs</li>
+                                </ul>
+
+                            </div>
+                            <div class="card-footer">
+                                <span class="mx-1"><button class="btn btn-dark">ViewSite</button></span>
+                                <span class="mx-1"><button class="btn btn-dark">View Code</button></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
