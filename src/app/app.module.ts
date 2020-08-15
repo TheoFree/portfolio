@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule } from '@angular/platform-browser/animations'
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResumeComponent } from './components/resume/resume.component';
@@ -9,7 +10,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { AviationComponent } from './components/aviation/aviation.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,9 @@ import { ArtworkComponent } from './components/artwork/artwork.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
