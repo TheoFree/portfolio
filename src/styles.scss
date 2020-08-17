@@ -9,3 +9,24 @@
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+ 
+@include media-breakpoint-down(md) {    
+    h1{
+        font-size:8vw;
+    }
+    h2{
+        font-size:7vw;
+    }
+}
+
+
+// @media screen and (min-width:250px){
+//     body{font-size:60%}
+// }
+
+// @media screen and (min-width:500px){
+//     body{font-size:75%}
+// }
+// @media screen and (min-width:1200px){
+//     body{font-size:100%}
+// }
