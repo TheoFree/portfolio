@@ -6,63 +6,30 @@
                 These are projects that I've recently completed, as well as some which I'm currently planning or
                 working on actively!
             </p>
+            <div class="row justify-content-around">
 
-            <div class="row">
-                <div class="col-lg-4 offset-lg-1 my-2">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>DnD 5e Character Sheet</strong>
-                        </div>
+                <div *ngFor="let project of this.projects;" class="col-lg-4 ">
+                    <div class="card h-100">
+                        <div class="card-header"><strong>{{project.title}}</strong></div>
                         <div class="card-body">
-                            <p>
-                                A character sheet tool where users can create, edit, and download characters.
-                            </p>
-                            <img src="/assets/images/CharSheetPreview.png" alt="Preview Image" width="75%">
-                            <p>
-                                The character sheet does some extra useful things for players like:
-                            </p>
-                            <ul>
-                                <li>Compute Modifiers</li>
-                                <li>Simple damage and healing buttons</li>
-                                <li>A spellbook page where players can keep track of spells of all levels</li>
+                            <img *ngIf="project.img!=''" src="{{project.img}}" alt="Preview Image" width="75%">
+                            <p>{{project.description}}</p>
+                            <ul *ngIf="project.bullets!=[]">
+                                <li *ngFor="let bullet of project.bullets">{{bullet}}</li>
                             </ul>
-
                         </div>
                         <div class="card-footer">
-                            <span class="mx-1">
-                                <a href="https://dnd5e-character-sheet.web.app/home" target="_blank"
-                                    class="btn btn-secondary">View Site</a>
+                            <span *ngIf="project.hostedURL!=''" class="mx-1">
+                                <a href="project.hostedURL" target="_blank" class="btn btn-secondary">View Site</a>
                             </span>
-                            <span class="mx-1">
-                                <a href="https://github.com/TheoFree/Dnd5eCharacterSheet" target="_blank"
-                                    class="btn btn-secondary">View Code</a>
+                            <span *ngIf="project.gitURL!=''" class="mx-1">
+                                <a href="project.gitURL" target="_blank" class="btn btn-secondary">View Code</a>
                             </span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-2 my-2">
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>Api Explorer</strong>
-                        </div>
-                        <div class="card-body">
-                            <p>
-                                This evolved into a project as I was working on learning about APIs.
-                                APIs implemented:
-                            </p>
-                            <ul>
-                                <li>Google Maps with a search bar that tries to autocomplete user entries</li>
-                                <li>An interface for a local server and mongodb database that I made</li>
-                                <li>Three different NASA APIs</li>
-                            </ul>
 
-                        </div>
-                        <div class="card-footer">
-                            <span class="mx-1"><button class="btn btn-dark">ViewSite</button></span>
-                            <span class="mx-1"><button class="btn btn-dark">View Code</button></span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
