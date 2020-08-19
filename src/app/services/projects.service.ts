@@ -51,7 +51,7 @@ export class ProjectsService {
 
         bullets: []
       },
-      img: "",
+      img: "/assets/images/APIExplorerPreview.png", 
       bullets: [
         "Google Maps with a search bar that tries to autocomplete user entries",
         "An interface for a local server and mongodb database that I made",
