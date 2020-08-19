@@ -42,9 +42,13 @@ export class ProjectsService {
       title: "Api Explorer",
       date: "2020-08-13T00:00Z",
       description: "This evolved into a project as I was working on learning about APIs.\nAPIs implemented:",
-      details:{
+      details: {
         text: `This project is simply the result of my trying to learn more about using APIs. 
-        It uses Angular, Node.js, Express, MongoDB, DevExtreme, and Joi. It started with building a web-app that I could access a local database through. Then I added Google Maps API, and a few NASA API's. I used DevExtreme to make a windrose from the wind data from Mars. Express, MongoDB, Joi and some other tools were used for developing the local database API`,
+        It uses Angular, Bootstrap, and DevExtreme. It started with building a web-app that I could access a local database through. Then I added Google Maps API, and a few NASA API's. I used DevExtreme to make a windrose from the wind data from Mars.
+         Node.js, Express, MongoDB, Joi and some other tools were used for developing the local database API.
+         While the interface I created to access the local DB works in my local development environment, it won't work on the hosted app, so It's been disabled for the hosted version.  
+         `,
+
         bullets: []
       },
       img: "",
