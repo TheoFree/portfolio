@@ -1,0 +1,14 @@
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="projectDetail">{{project.title}}</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <pre style="white-space:pre-wrap;">{{project.details.text}}
+            <ul *ngIf="project.details.bullets">
+                <li *ngFor="let bullet of project.details.bullets"> {{bullet}}</li>
+            </ul>
+        </pre>
+    </div>

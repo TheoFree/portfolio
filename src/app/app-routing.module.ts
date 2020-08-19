@@ -5,13 +5,23 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { AviationComponent } from './components/aviation/aviation.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 const routes: Routes = [
   {
     path:"home",
-    
-    component:HomeComponent
+    component:HomeComponent,
+    children: [
+      {
+        path:"resume",
+        component:ResumeComponent
+      },
+      {
+        path:"projects",
+        component:ProjectsComponent
+      }
+    ]
   },
   {
     path:"",

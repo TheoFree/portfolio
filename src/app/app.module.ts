@@ -12,6 +12,7 @@ import { AviationComponent } from './components/aviation/aviation.component';
 import { ArtworkComponent } from './components/artwork/artwork.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
+import { ModalComponent } from './components/projects/modal/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HomeComponent } from './components/home/home.component';
     AboutmeComponent,
     AviationComponent,
     ArtworkComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
