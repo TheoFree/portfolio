@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProjectsService {
-  public projects= [
+  private projects= [
     {
       title: "DnD 5e Character Sheet",
       date: "2020-07-24T00:00Z",
@@ -33,6 +33,7 @@ export class ProjectsService {
       hostedURL: ""
     }
   ]
+  public get_projects =()=>{return this.projects;}
   constructor() {
   }
 }
