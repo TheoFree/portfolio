@@ -29,6 +29,7 @@ export class ProjectsService {
           "Attaching a database that users can store their charactersheets in rather than downloading to save changes.  "]
       },
       img: "/assets/images/CharSheetPreview.png",
+      status: "finished",
       bullets: [
         "Compute Modifiers",
         "Simple damage and healing buttons",
@@ -51,7 +52,8 @@ export class ProjectsService {
 
         bullets: []
       },
-      img: "/assets/images/APIExplorerPreview.png", 
+      img: "/assets/images/APIExplorerPreview.png",
+      status: "finished", 
       bullets: [
         "Google Maps with a search bar that tries to autocomplete user entries",
         "An interface for a local server and mongodb database that I made",
@@ -60,7 +62,38 @@ export class ProjectsService {
       gitURL: "",
       hostedURL: ""
     }
+    ,
+    {
+      title: "Dnd 5e Charsheet Update",
+      date: "2020-08-13T00:00Z",
+      description: "Update in progress for adding in additional features, increasing responsiveness, reworking spellbooks",
+      details: {
+        text: ``,
+        bullets: []
+      },
+      img: "/assets/images/CharSheetPreview.png",
+      status: "in-progress", 
+      bullets: [],
+      gitURL: "",
+      hostedURL: ""
+    }
   ]
+
+  /* Quick Copy template for adding projects
+  {
+      title: "",
+      date: "2020-00-00T00:00Z",
+      description: "",
+      details: {
+        text: ``,
+        bullets: []
+      },
+      img: "",
+      status: "", 
+      bullets: [],
+      gitURL: "",
+      hostedURL: ""
+    } */
   public get_projects = () => { return this.projects; }
   constructor() {
   }
