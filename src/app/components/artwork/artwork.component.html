@@ -1,1 +1,54 @@
-<p>artwork works!</p>
+<div class="container-fluid text-center h-100">
+    <div class="row">
+        <div class="col">
+            <h1>Artwork</h1>
+        </div>
+    </div>
+    <div class="separator-bar my-2 w-75 mx-auto"></div>
+    <div class="row">
+        <div class="col">
+            <p>
+                I've been an artist my entire life. It's something I've done since I can remember, and has been really fun and rewarding for me.
+                <br>
+                I figured I'd include this section because maybe some people would appreciate it. Maybe one day I'll sell some of my art on the side.
+                <br>
+                Everything I've put up has been done in Adobe Photoshop. I have tons of other artwork in traditional media, which I might start scanning and
+                add in later. 
+
+                <br>
+                Most of this work is various characters I've made for DND. They're ordered oldest to new. I wouldn't consider a few of these to be 'finished' 
+                but they're probably as finished as they'll ever be.
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center ">
+        <div class="col-lg-4 card-col" *ngFor="let img of this.row">
+            <div class="card mx-auto card-img-display" [ngClass]="{
+                'w-auto':this.row.length==1,
+                'w-75':this.row.length==2
+            }" >
+                <div class="card-header">
+                    <strong>{{img.title}}</strong>
+                    <br>
+                    {{img.date}}
+                </div>
+                <div class="card-body">
+                    <img id="card-image" src="{{img.src}}" alt="{{img.title}}">
+                </div>
+                <div class="card-footer">
+                    <p>{{img.dsc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col " *ngIf="this.rowIndex > 1">
+            <button class="btn" (click)="this.viewRow(this.rowIndex-1)">Previous</button>
+        </div>
+
+        <div class="col" *ngIf="this.rowIndex &lt; this.imgRows">
+            <div class="button btn" (click)="viewRow(this.rowIndex+1)" style="z-index: 2;">Next</div>
+        </div>
+    </div>
+
+</div>

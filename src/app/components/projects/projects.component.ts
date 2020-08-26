@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef, ChangeDetectorRef } from '@angular/core';
-import { ProjectsService } from 'src/app/services/projects.service';
+import { ProjectsService } from 'src/app/services/projects/projects.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './modal/modal.component'
 @Component({
@@ -43,11 +43,10 @@ export class ProjectsComponent implements OnInit {
     }
   }
  
-  projectsPage = (page = 0) => {
-    this.nProjects;
+  projectsPage = (page = 1) => {
     if (this.nProjects <= 2) this.projects_display =this.projects;
     else {
-      var start = page*2;
+      var start = (page-1)*2;
       this.cdr.detach();
       this.projects_display = this.projects.slice(start,start+2);
       this.current_page = page;
@@ -58,8 +57,8 @@ export class ProjectsComponent implements OnInit {
   
   
   ngOnInit(): void {
-    for(var i = 1; i<this.nPages+1;i++)this.pages.push(i);
-    this.projectsPage();
+    for(var i = 1; i<=this.nPages;i++)this.pages.push(i);
+    this.projectsPage(1);
    
   }
 

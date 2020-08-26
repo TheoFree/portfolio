@@ -1,0 +1,19 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+    #card-image{
+        max-height: 100%;
+        max-width:100%;
+        height:auto;
+        object-fit:contain;
+    }
+    @include media-breakpoint-down(sm){
+        .card-col{height:100%}
+        .card-img-display{height: 100%;}
+    }
+    @include media-breakpoint-up(sm){
+        .card-col{height: 65vh;}
+        .card-img-display{height:90%;}
+    }
+

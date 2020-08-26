@@ -1,13 +1,7 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
-@include media-breakpoint-down(sm){
-    .small-disp{
-        display:block;
-    }
-}
-@include media-breakpoint-up(sm){
-    .small-disp{
-        display:none;
-    }
+.small-disp{
+    @include media-breakpoint-down(sm){display:block;}
+    @include media-breakpoint-up(sm){display:none;}
 }
