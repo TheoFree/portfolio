@@ -23,10 +23,10 @@
                 </div>
             </div>
 
-            <div class="row justify-content-around align-items-stretch" >
+            <div class="row justify-content-around align-items-stretch proj-row" >
 
-                <div *ngFor="let project of this.projects_display;" class="col-10 col-lg-6 col-xl-5 vh-xl-100">
-                    <div class="card h-auto">
+                <div *ngFor="let project of this.projects_display;" class="col-10 col-lg-6 col-xl-5">
+                    <div class="card h-100">
                         <div class="card-header" [ngClass]="{
                             'bg-success':project.status=='finished',
                             'bg-warning':project.status=='in-progress',
@@ -43,7 +43,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-footer" *ngIf="project.hostedURL || project.gitURL">
+                        <div class="card-footer" *ngIf="project.hostedURL || project.gitURL" style="position: absolute;bottom:0;width:100%">
                             <span *ngIf="project.hostedURL!=''" class="mx-1">
                                 <a href="{{project.hostedURL}}" target="_blank" class="btn btn-secondary">View Site</a>
                             </span>
@@ -57,18 +57,18 @@
 
             </div>
             <div class="row">
-                <div class="col-lg-2 offset-2">
+                <div class="col-lg-2 offset-lg-2 col">
                     <button class="btn" *ngIf="this.current_page>1" (click)="this.projectsPage(this.current_page-1)">
                         Previous
                     </button>
                 </div>
-                <div class="col-lg-4">
-                    <span class="mx-2" *ngFor="let pg of this.pages.slice(this.current_page-1,this.current_page+1)">
+                <div class="col-lg-4 col-12">
+                    <span class="mx-2" *ngFor="let pg of this.pages">
                         <button class="btn" [ngClass]="{'btn-primary':this.current_page==pg}"
                             (click)="this.projectsPage(pg)">{{pg}}</button>
                     </span>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col">
                     <button class="btn mx-2" *ngIf="this.current_page &lt; this.nPages"
                         (click)="this.projectsPage(this.current_page+1)">
                         Next

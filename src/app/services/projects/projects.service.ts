@@ -50,7 +50,7 @@ export class ProjectsService {
          While the interface I created to access the local DB works in my local development environment, it won't work on the hosted app, so It's been disabled for the hosted version
          This can still be viewed in the code on github. 
 
-         I used a skillshare course to build the server and database, so credit should go to rapiddevpro on skillshare.
+         I learned how to build the server and database from a skillshare course, so credit should go to rapiddevpro on skillshare.
          `,
 
         bullets: []
@@ -72,8 +72,9 @@ export class ProjectsService {
       description: "This is my portfolio, which you're viewing. Click for details.",
       details: {
         text: `I've been working on this project for some time now. It is simple, but also probably the most visually well built web app that I've made so far.
-        I spent a decent amount of time trying to make it mobile friendly. The layout and text is responsive from what I've been able to test. I tried out my first animations for switching between the resume and projects views. 
-
+        I spent a decent amount of time trying to make it mobile friendly. The layout and text is responsive from what I've been able to test. 
+        I tried out my first animations for switching between the resume and projects views. 
+        I also used modals for the first time. 
         
         This was made with:`,
         bullets: ["Angular","Node","Bootstrap","HTML","SCSS"]
@@ -107,6 +108,20 @@ export class ProjectsService {
         bullets: []
       },
       img: "/assets/images/MotoTripPreviewTemp.jpg",
+      status: "planned", 
+      bullets: [],
+      gitURL: "",
+      hostedURL: ""
+    },
+    {
+      title: "Portfolio Update",
+      date: "2020-00-00T00:00Z",
+      description: "Add a database to the portfolio so I can log in and upload details for new projects, aviation cards, and artwork without redeploying as well as modify or remove existing entries.",
+      details: {
+        text: ``,
+        bullets: []
+      },
+      img: "/assets/images/PortfolioPreview.png",
       status: "planned", 
       bullets: [],
       gitURL: "",

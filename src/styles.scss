@@ -21,10 +21,12 @@
 @include media-breakpoint-down(sm){
     .card-col{height:100%}
     .card-img-display{height: 100%;}
+    .proj-row{height:100%}
 }
 @include media-breakpoint-up(sm){
     .card-col{height: 65vh;}
     .card-img-display{height:90%;}
+    .proj-row{height:60vh;}
 }
  
 @include media-breakpoint-down(md) { 

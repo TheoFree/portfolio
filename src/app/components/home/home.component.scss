@@ -2,6 +2,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 .small-disp{
-    @include media-breakpoint-down(sm){display:block;}
-    @include media-breakpoint-up(sm){display:none;}
+    @include media-breakpoint-down(md){display:block;}
+    @include media-breakpoint-up(md){display:none;}
 }
