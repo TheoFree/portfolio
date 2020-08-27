@@ -63,7 +63,7 @@ export class ProjectsService {
         "Three different NASA APIs"
       ],
       gitURL: "https://github.com/TheoFree/apiExplorer/",
-      hostedURL: ""
+      hostedURL: "https://apiexplorertfree.firebaseapp.com/home"
     }
     ,
     {

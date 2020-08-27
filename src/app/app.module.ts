@@ -13,6 +13,8 @@ import { ArtworkComponent } from './components/artwork/artwork.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { ModalComponent } from './components/projects/modal/modal.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,7 @@ import { ModalComponent } from './components/projects/modal/modal.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // NgbModule
   ],
   providers: [],
