@@ -42,12 +42,15 @@ export class ProjectsService {
     {
       title: "Api Explorer",
       date: "2020-08-13T00:00Z",
-      description: "This evolved into a project as I was working on learning about APIs.\nAPIs implemented:",
+      description: "This evolved into a project as I was working on learning about APIs. \nAPIs implemented:",
       details: {
         text: `This project is simply the result of my trying to learn more about using APIs. 
         It uses Angular, Bootstrap, and DevExtreme. It started with building a web-app that I could access a local database through. Then I added Google Maps API, and a few NASA API's. I used DevExtreme to make a windrose from the wind data from Mars.
          Node.js, Express, MongoDB, Joi and some other tools were used for developing the local database API.
-         While the interface I created to access the local DB works in my local development environment, it won't work on the hosted app, so It's been disabled for the hosted version.  
+         While the interface I created to access the local DB works in my local development environment, it won't work on the hosted app, so It's been disabled for the hosted version
+         This can still be viewed in the code on github. 
+
+         I used a skillshare course to build the server and database, so credit should go to rapiddevpro on skillshare.
          `,
 
         bullets: []
@@ -56,13 +59,31 @@ export class ProjectsService {
       status: "finished", 
       bullets: [
         "Google Maps with a search bar that tries to autocomplete user entries",
-        "An interface for a local server and mongodb database that I made",
+        "An interface for a local server and mongodb database that I made from a skillshare course",
         "Three different NASA APIs"
       ],
-      gitURL: "",
+      gitURL: "https://github.com/TheoFree/apiExplorer/",
       hostedURL: ""
     }
     ,
+    {
+      title: "Portfolio",
+      date: "2020-08-27T00:00Z",
+      description: "This is my portfolio, which you're viewing. Click for details.",
+      details: {
+        text: `I've been working on this project for some time now. It is simple, but also probably the most visually well built web app that I've made so far.
+        I spent a decent amount of time trying to make it mobile friendly. The layout and text is responsive from what I've been able to test. I tried out my first animations for switching between the resume and projects views. 
+
+        
+        This was made with:`,
+        bullets: ["Angular","Node","Bootstrap","HTML","SCSS"]
+      },
+      img: "/assets/images/PortfolioPreview.png",
+      status: "finished", 
+      bullets: [],
+      gitURL: "https://github.com/TheoFree/portfolio",
+      hostedURL: ""
+    },
     {
       title: "Dnd 5e Charsheet Update",
       date: "2020-08-13T00:00Z",
@@ -73,6 +94,20 @@ export class ProjectsService {
       },
       img: "/assets/images/CharSheetPreview.png",
       status: "in-progress", 
+      bullets: [],
+      gitURL: "",
+      hostedURL: ""
+    },
+    {
+      title: "Motorcycle Trip Planner/Tracker",
+      date: "2020-08-27T00:00Z",
+      description: "A planned project that will use the technologies below to create a web app that will be a single page application that users can plan motorcycle trips on and save them to their account and access from anywhere.",
+      details: {
+        text: ``,
+        bullets: []
+      },
+      img: "/assets/images/MotoTripPreviewTemp.jpg",
+      status: "planned", 
       bullets: [],
       gitURL: "",
       hostedURL: ""

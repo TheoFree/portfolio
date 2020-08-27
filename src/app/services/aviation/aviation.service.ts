@@ -15,7 +15,7 @@ export class AviationService {
         {
           name: "First Trip",
           src: "assets/images/Aviation/flight_home_with_leah.jpg",
-          dsc: "The first trip I made after my certificate was with Leah from our local airort to Taos,NM->Santa Fe,NM->Pueblo,CO->home. It was a week long trip and we had a great time."
+          dsc: "The first trip I made after my certificate was with Leah from our local airort to Taos,NM->Santa Fe,NM->Pueblo,CO->home. It was a week long trip and we had a great time. We flew in the plane that Leah did most of her training in: a Piper Cherokee 180 N888AW"
         }
       ],
       [

@@ -5,15 +5,31 @@
     height:4px;
     display: flexbox;
     width: 100%;
-    background-color: rgb(255, 115, 0);
+    background-color: #ff7300;
 }
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
 
+#card-image{
+    max-height: 100%;
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+}
 
+@include media-breakpoint-down(sm){
+    .card-col{height:100%}
+    .card-img-display{height: 100%;}
+}
+@include media-breakpoint-up(sm){
+    .card-col{height: 65vh;}
+    .card-img-display{height:90%;}
+}
  
-@include media-breakpoint-down(md) {    
+@include media-breakpoint-down(md) { 
+    *{font-size:3vw;}
+
     h1{
         font-size:6vw;
     }
@@ -22,6 +38,12 @@
     }
     h3{
         font-size:5vw;
+    }
+    h4{
+        font-size:4.5vw;
+    }
+    h5{
+        font-size:4vw;
     }
 
 
