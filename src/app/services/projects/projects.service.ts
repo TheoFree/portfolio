@@ -6,6 +6,34 @@ import { Injectable } from '@angular/core';
 export class ProjectsService {
   private projects = [
     {
+      title: "Py webscraper/ Ted's Current Events",
+      date: "2020-09-02T00:00Z",
+      description: "This is a homebuilt RSS Feed parser. Here are the tools I used:",
+      details: {
+        text: ` The first time I worked on a web-scraping feed parser like this was in my Databases class in my senior year. It was a project where we were just supposed to modify the professor's existing
+        fully functioning news-scraper to have an extra element for each article. I just added a subject at that time. 
+        
+        This time around, I built it from scratch. I used python with beautiful soup, and Flask for the data related backend functions. I use a  MySql database to store the information I gather, and an Angular web app to display and manage everything.
+        I went a little further than a static display for the information though. I've added a way to manage the sources in the database so that a user can dynamically add or remove sources to gather information from. 
+        Each source has a category and genre assigned to it when put into the database which is then used to separate the information for the user. 
+        
+        The code also works for some job listing websites like stack-overflow and We Work Remotely.
+        I also started building a search function which works for all of the articles that are shown but is most useful for jobs
+        `
+      },
+      img: "/assets/images/WebScraperPreview.png",
+      status: "in-progress",
+      bullets: [
+        "Angular",
+        "Flask",
+        "Python",
+        "MySql"
+      ],
+      hostedURL: '',
+      gitURL: "https://github.com/TheoFree/webScraper"
+
+    },
+    {
       title: "DnD 5e Character Sheet",
       date: "2020-07-24T00:00Z",
       description: "A character sheet tool where users can create, edit, and download characters. \nThe character sheet does some extra useful things for players like:",
