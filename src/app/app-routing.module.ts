@@ -9,40 +9,50 @@ import { ProjectsComponent } from './components/projects/projects.component';
 
 
 const routes: Routes = [
+  // {
+  //   path:"home",
+  //   component:HomeComponent,
+  //   // children: [
+  //   //   {
+  //   //     path:"resume",
+  //   //     component:ResumeComponent
+  //   //   },
+  //   //   {
+  //   //     path:"projects",
+  //   //     component:ProjectsComponent
+  //   //   }
+  //   // ]
+  // },
   {
-    path:"home",
-    component:HomeComponent,
-    children: [
-      {
-        path:"resume",
-        component:ResumeComponent
-      },
-      {
-        path:"projects",
-        component:ProjectsComponent
-      }
-    ]
+    path: "resume",
+    component: ResumeComponent
   },
   {
-    path:"",
-    pathMatch:"full",
-    redirectTo:"home"
+    path: "",
+    pathMatch: "full",
+    redirectTo: "resume"
   },
   {
-    path:"about",
-    component:AboutmeComponent
+    path: "projects",
+    component: ProjectsComponent
+
+  },
+
+  {
+    path: "about",
+    component: AboutmeComponent
   },
   {
-    path:"aviation",
-    component:AviationComponent
+    path: "aviation",
+    component: AviationComponent
   },
+  // {
+  //   path:"artwork",
+  //   component:ArtworkComponent
+  // },
   {
-    path:"artwork",
-    component:ArtworkComponent
-  },
-  {
-    path:"**",
-    component:HomeComponent
+    path: "**",
+    component: ResumeComponent
   }
 ];
 
