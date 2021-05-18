@@ -38,12 +38,26 @@
                         <!-- Skills and Education -->
                         <div class="row no-gutters">
                             <!-- Skills -->
-                            <div class="col-4 offset-1">
+                            <div class="col-4">
                                 <div class="row ">
                                     <h3 class="mx-auto">Skills</h3>
                                 </div>
                                 <div class="row">
                                     <ul>
+                                        <li>
+                                            <ng-template #Cyber>
+                                                <ul>
+                                                    <li>Network Security</li>
+                                                    <li>Risk Management, Compliance Frameworks</li>
+                                                    <li>Threat Actors, TTP, IoC</li>
+                                                    <li>Data/Host Security</li>
+                                                    <li>IAM, Access Control</li>
+                                                    <li>Cryptography, PKI</li>
+                                                </ul>
+                                            </ng-template>
+                                            <strong class="skill" placement="right" [ngbTooltip]="Cyber"> Cyber Security</strong>
+                                        </li>
+                                        
                                         <li>
                                             <ng-template #WebDev>
                                                 <ul>
@@ -55,9 +69,7 @@
                                                     <li>Bootstrap</li>
                                                 </ul>
                                             </ng-template>
-                                            <strong class="skill" placement="right" [ngbTooltip]="WebDev">Web
-                                                Development</strong>
-
+                                            <strong class="skill" placement="right" [ngbTooltip]="WebDev">Web Development</strong>
                                         </li>
                                         <li>
                                             <ng-template #Langs>
@@ -123,11 +135,17 @@
                                 </div>
 
                             </div>
-                            <div class="col-1 offset-1">
+                            <!-- <div class="col-1 offset-1">
                                 <div class="separator-col"></div>
+                            </div> -->
+                            <!-- Certs -->
+                            <div class="col-4">
+                                <div class="row">
+                                    <h3 class="mx-auto">Certs</h3>
+                                </div>
                             </div>
                             <!-- Education -->
-                            <div class="col-5">
+                            <div class="col-4">
                                 <div class="row">
                                     <h3 class="mx-auto">Education</h3>
                                     <span>
