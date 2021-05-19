@@ -8,10 +8,10 @@
                 working on actively!
                 <br>
                 You can click on the body of a card to see a more detailed description.
-                Projects Color coded as follows:
+                <!-- Projects Color coded as follows: -->
 
             </p>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-10 offset-1 ">
                     <ul class="list-inline">
                         <li class="mx-2 list-inline-item text-success "> <strong> For finished projects </strong></li>
@@ -21,17 +21,20 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <div class="row justify-content-around align-items-stretch proj-row" >
 
                 <div *ngFor="let project of this.projects_display;" class="col-10 col-lg-6 col-xl-5">
                     <div class="card h-100">
-                        <div class="card-header" [ngClass]="{
+                        <div class="card-header" >
+                            <!-- [ngClass]="{
                             'bg-success':project.status=='finished',
                             'bg-warning':project.status=='in-progress',
                             'bg-primary':project.status=='planned'
-                        }">
+                        }"
+                    
+                    Saving to re-add project color coding-->
                             <strong>{{project.title}}</strong>
                         </div>
                         <div *ngIf="project.details "(click)="open(project)">

@@ -42,10 +42,10 @@ const routes: Routes = [
     path: "about",
     component: AboutmeComponent
   },
-  {
+  /* {
     path: "aviation",
     component: AviationComponent
-  },
+  }, */
   // {
   //   path:"artwork",
   //   component:ArtworkComponent
