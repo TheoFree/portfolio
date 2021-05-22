@@ -9,12 +9,13 @@
                         Resume PDF</a>
                 </button>
             </div>
+
             <!-- Button for downloading resume on small screens -->
-            <div class=" d-lg-none d-block" style="position: absolute;right:0;z-index: 2;">
+            <!-- <div class=" d-lg-none d-block" style="position: absolute;right:0;z-index: 2;">
                 <button class="btn btn-dark btn-outline-warning">
                     <a href="/assets/documents/resume-download.pdf" download="Theodore_Freeman_Resume.pdf">Download</a>
                 </button>
-            </div>
+            </div> -->
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -38,10 +39,11 @@
                         <!-- Skills and Education -->
                         <div class="row gutters">
                             <!-- Skills -->
-                            <div class="col-4">
+                            <div class="col-lg-3 col-md-12">
                                 <div class="row ">
                                     <h3 class="mx-auto">Skills</h3>
                                 </div>
+
                                 <div class="row">
                                     <ul>
                                         <li>
@@ -137,31 +139,43 @@
                                 </div>
 
                             </div>
-                            <!-- <div class="col-1 offset-1">
-                                <div class="separator-col"></div>
-                            </div> -->
+                            <div class="col-lg-1 ">
+                                <!-- <div class="separator-col"></div> -->
+                            </div>
                             <!-- Certs -->
-                            <div class="col-4 ">
-                                <div class="row text-center">
-                                    <div class="col">
+                            <div class="col-lg-4 col-md-12 ">
+                                <div class="row  no-gutters">
+                                    <div class="col ">
 
-                                        <h3 class="mx-auto">Certs</h3>
+                                        <h3 class="mx-auto text-center">Certificates</h3>
                                         <br>
-                                        <div class="row align-items-center  my-1 ">
-                                            <img src="../../../assets/images/SecurityPlus Logo Certified CE.png"
-                                                alt="CompTIA SecurityPlus Logo Certified CE" class="img w-25 ">
-                                            <div class="mx-1">
+                                        <div class="row align-items-center  my-1 mx-auto">
+
+                                            <div class="col-5">
+                                                <img src="../../../assets/images/SecurityPlus Logo Certified CE.png"
+                                                    alt="CompTIA SecurityPlus Logo Certified CE" class="img w-100">
+
+                                            </div>
+                                            <div class="col-7">
                                                 CompTIA Security+ Certified
                                             </div>
                                         </div>
                                         <div class="row">
-                                            Other badges can be viewed at my<a class="mx-1" href="https://www.credly.com/users/theodore-freeman.cf78f83e/badges"> Credly</a>
+                                            <div class="col mx-auto">
+
+                                                Other badges can be viewed at my<a class="mx-1"
+                                                    href="https://www.credly.com/users/theodore-freeman.cf78f83e/badges">
+                                                    Credly</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-1 ">
+                                <!--  <div class="separator-col"></div> -->
+                            </div>
                             <!-- Education -->
-                            <div class="col-4">
+                            <div class="col-lg-3 col-md-12">
                                 <div class="row">
                                     <h3 class="mx-auto">Education</h3>
                                     <span>
@@ -169,10 +183,10 @@
                                         GPA: 2.93
                                         <br>
                                         Minor: Nordic Studies
-                                    </span>
-                                    <span>
+
                                         <br>
-                                        University of Colorado, Boulder</span>
+                                        University of Colorado, Boulder
+                                    </span>
                                 </div>
                             </div>
 
@@ -206,23 +220,23 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="contact-container text-center">
-    <h4>Contact Me</h4>
-    <span>
-        <a href="https://github.com/TheoFree" target="_blank">
-            <img class="mx-2" src="/assets/icons/github-32px.png" alt="my github">
-        </a>
-        <a href="https://www.linkedin.com/in/theodore-freeman-595079115/" target="_blank">
-            <img class="mx-2" src="/assets/icons/linkedin-32px.png" alt="my linkedin">
-        </a>
-        <img class="mx-2" src="/assets/icons/mail.png" alt="my email" ngbPopover="theofreeman@gmail.com"
-            popoverTitle="My email" placement="top" style="cursor: pointer;">
-        <img class="mx-2" src="/assets/icons/phone.png" alt="my phone" ngbPopover="720-737-7289" popoverTitle="My Cell"
-            placement="bottom" style="cursor: pointer;">
-    </span>
+        <div class="col-md-12 col-lg-2 text-center">
+            <h4>Contact Me</h4>
+            <span>
+                <a href="https://www.linkedin.com/in/theodore-freeman-595079115/" target="_blank">
+                    <img class="mx-2" src="/assets/icons/linkedin-32px.png" alt="my linkedin">
+                </a>
+                <a href="https://github.com/TheoFree" target="_blank">
+                    <img class="mx-2" src="/assets/icons/github-32px.png" alt="my github">
+                </a>
+                <img class="mx-2" src="/assets/icons/mail.png" alt="my email" ngbPopover="theofreeman@gmail.com"
+                    popoverTitle="My email" placement="top" style="cursor: pointer;">
+                <img class="mx-2" src="/assets/icons/phone.png" alt="my phone" ngbPopover="720-737-7289"
+                    popoverTitle="My Cell" placement="bottom" style="cursor: pointer;">
+            </span>
+        </div>
+    </div>
 </div>
 <div style="position: relative;bottom:0;width: 100%;">
     <div style=" margin: auto; width: 50%;text-align: center;">Icons made by <a

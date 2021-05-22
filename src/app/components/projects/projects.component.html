@@ -23,10 +23,10 @@
                 </div>
             </div> -->
 
-            <div class="row justify-content-around align-items-stretch proj-row" >
+            <div class="row justify-content-around  proj-row h-100" >
 
-                <div *ngFor="let project of this.projects_display;" class="col-10 col-lg-6 col-xl-5">
-                    <div class="card h-100">
+                <div *ngFor="let project of this.projects_display;" class="col-10 col-lg-6 col-xl-5 mb-5">
+                    <div class="card h-100 mt-n3 align-items-stretch"  >
                         <div class="card-header" >
                             <!-- [ngClass]="{
                             'bg-success':project.status=='finished',
@@ -40,8 +40,9 @@
                         <div *ngIf="project.details "(click)="open(project)">
                             <div class="card-body pt-0 " [ngClass]="{'btn btn-d':project.details.text!=''}">
                                 <img *ngIf="project.img!=''" src="{{project.img}}" alt="Preview Image" width="75%">
-                                <p>{{project.description}}</p>
-                                <ul *ngIf="project.bullets!=[]">
+                                <br>
+                                {{project.description}}
+                                <ul *ngIf="project.bullets!=[]" >
                                     <li *ngFor="let bullet of project.bullets">{{bullet}}</li>
                                 </ul>
                             </div>
@@ -59,13 +60,13 @@
 
 
             </div>
-            <div class="row">
+            <div class="row fixed-bottom mb-2">
                 <div class="col-lg-2 offset-lg-2 col">
                     <button class="btn" *ngIf="this.current_page>1" (click)="this.projectsPage(this.current_page-1)">
                         Previous
                     </button>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 ">
                     <span class="mx-2" *ngFor="let pg of this.pages">
                         <button class="btn" [ngClass]="{'btn-primary':this.current_page==pg}"
                             (click)="this.projectsPage(pg)">{{pg}}</button>
