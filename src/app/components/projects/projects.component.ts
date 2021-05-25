@@ -12,7 +12,7 @@ export class ProjectsComponent implements OnInit {
   current_page = 1;
   pages = [];
   projects_display = [];
-
+  
   constructor(private ps: ProjectsService, private ModalSvc: NgbModal, private cdr: ChangeDetectorRef) { }
   open(project) {
     if (project.details.text) {
@@ -29,10 +29,10 @@ export class ProjectsComponent implements OnInit {
       console.log(`Project '${project.title}' has no detailed information to show.`)
     }
   }
-  
+
   projects = this.ps.get_projects();
   nProjects = this.projects.length;
-  nPages = Math.ceil(this.nProjects/2);
+  nPages = Math.ceil(this.nProjects / 2);
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
@@ -42,24 +42,29 @@ export class ProjectsComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
- 
+
   projectsPage = (page = 1) => {
-    if (this.nProjects <= 2) this.projects_display =this.projects;
-    else {
-      var start = (page-1)*2;
-      this.cdr.detach();
-      this.projects_display = this.projects.slice(start,start+2);
-      this.current_page = page;
-      this.cdr.detectChanges();
-      this.cdr.reattach();
+    if (window.matchMedia("(max-width:768px)").matches) {
+      this.projects_display = this.projects;
+    } else {
+      if (this.nProjects <= 2) this.projects_display = this.projects;
+      else {
+        var start = (page - 1) * 2;
+        this.cdr.detach();
+        this.projects_display = this.projects.slice(start, start + 2);
+        this.current_page = page;
+        this.cdr.detectChanges();
+        this.cdr.reattach();
+      }
     }
+
   }
-  
-  
+
+
   ngOnInit(): void {
-    for(var i = 1; i<=this.nPages;i++)this.pages.push(i);
+    for (var i = 1; i <= this.nPages; i++)this.pages.push(i);
     this.projectsPage(1);
-   
+
   }
 
 }
